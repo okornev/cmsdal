@@ -553,6 +553,7 @@ public class CmsUtil {
         rfc.setRfcUpdated(rfcSimple.getRfcUpdated());
         rfc.setRfcUpdatedBy(rfcSimple.getRfcUpdatedBy());
 
+        rfc.setHint(rfcSimple.getHint());
 
         for (String attrSimpleName : rfcSimple.getCiAttributes().keySet()) {
             CmsRfcAttribute attr = new CmsRfcAttribute();
@@ -643,6 +644,8 @@ public class CmsUtil {
 
         rfcSimple.setRfcCreatedBy(rfc.getRfcCreatedBy());
         rfcSimple.setRfcUpdatedBy(rfc.getRfcUpdatedBy());
+
+        rfcSimple.setHint(rfc.getHint());
 
         for (CmsRfcAttribute attr : rfc.getAttributes().values()) {
 
@@ -860,6 +863,7 @@ public class CmsUtil {
                 }
             }
         }
+        wos.setConfig(wo.getConfig());
         return wos;
     }
 
@@ -887,6 +891,7 @@ public class CmsUtil {
         }
 
         wo.setAdditionalInfo(wos.getAdditionalInfo());
+        wo.setConfig(wos.getConfig());
         return wo;
     }
 
